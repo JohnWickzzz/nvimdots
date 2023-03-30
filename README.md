@@ -135,7 +135,7 @@ It's strongly recommended to read [Wiki: Prerequisites](https://github.com/ayami
 </h3>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/dashboard.png" alt="Dashboard">
+    <img src="https://raw.githubusercontent.com/buptlibo/nvimdots/main/dashbord.jpg" alt="Dashboard">
     <em>Dashboard</em>
 </p>
 <br>
