@@ -61,7 +61,7 @@ Chinese introduction is [here](https://zhuanlan.zhihu.com/p/382092667).
 - **Modular.** Easy to customize.
 - **Powerful.** Full functionality to code.
 
-## 🏗 How to Install
+## 🏗 How to Install (目前只改了 mac 这边的，\*nix 应该也没问题)
 
 Just run the following interactive bootstrap command, and you're good to go 👍
 
