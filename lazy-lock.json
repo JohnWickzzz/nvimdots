@@ -123,8 +123,7 @@
         "branch": "master",
         "commit": "018bd04d80c9a73d399c1061fa0c3b14a7614399"
     },
-<<<<<<< HEAD
-  "lazy.nvim": {
+    "lazy.nvim": {
         "branch": "main",
         "commit": "e27c9df5fe039e9d2833ef4fcf7305595d5ccda7"
     },
@@ -132,14 +131,7 @@
         "branch": "master",
         "commit": "6f6252f63b0baf0f2224c4caea33819a27f3f550"
     },
-=======
-  "lazy.nvim": {
-        "branch": "main",
-        "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b"
-    },
-
->>>>>>> 6be63d778e0d77835ca73db31050b86696671d99
-  "lspkind.nvim": {
+    "lspkind.nvim": {
         "branch": "master",
         "commit": "c68b3a003483cf382428a43035079f78474cd11e"
     },
