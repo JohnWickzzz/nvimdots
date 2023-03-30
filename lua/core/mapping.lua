@@ -34,6 +34,9 @@ local core_map = {
 	-- Insert mode
 	["i|<C-u>"] = map_cmd("<C-G>u<C-U>"):with_noremap():with_desc("editi: Delete previous block"),
 	["i|<C-b>"] = map_cmd("<Left>"):with_noremap():with_desc("editi: Move cursor to left"),
+	["i|<C-f>"] = map_cmd("<Right>"):with_noremap():with_desc("editi: Move cursor to right"),
+	["i|<C-j>"] = map_cmd("<Down>"):with_noremap():with_desc("editi: Move cursor to down"),
+	["i|<C-k>"] = map_cmd("<Up>"):with_noremap():with_desc("editi: Move cursor to up"),
 	["i|<C-a>"] = map_cmd("<ESC>^i"):with_noremap():with_desc("editi: Move cursor to line start"),
 	["i|<C-s>"] = map_cmd("<Esc>:w<CR>"):with_desc("editi: Save file"),
 	["i|<C-q>"] = map_cmd("<Esc>:wq<CR>"):with_desc("editi: Save file and quit"),
