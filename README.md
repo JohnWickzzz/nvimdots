@@ -143,7 +143,7 @@ It's strongly recommended to read [Wiki: Prerequisites](https://github.com/ayami
 <p align="center">
     <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/telescope.png" alt="Telescope">
     <em>Telescope</em>
-    💥 需要额外插件，https://github.com/BurntSushi/ripgrep#installation
+    <em>💥 需要额外插件，https://github.com/BurntSushi/ripgrep#installation</em>
 </p>
 <br>
 
