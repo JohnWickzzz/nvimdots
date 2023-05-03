@@ -14,7 +14,6 @@ return function()
 			color_icons = true,
 			show_buffer_icons = true,
 			show_buffer_close_icons = true,
-			show_buffer_default_icon = true,
 			show_close_icon = true,
 			show_tab_indicators = true,
 			enforce_regular_tabs = true,
@@ -45,7 +44,7 @@ return function()
 		highlights = {},
 	}
 
-	if vim.g.colors_name == "catppuccin" then
+	if vim.g.colors_name:find("catppuccin") then
 		local cp = require("modules.utils").get_palette() -- Get the palette.
 
 		local catppuccin_hl_overwrite = {
