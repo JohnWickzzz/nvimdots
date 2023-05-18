@@ -9,6 +9,10 @@ settings["use_ssh"] = false
 ---@type boolean
 settings["format_on_save"] = true
 
+-- Set it to false if diagnostics virtual text is annoying for you
+---@type boolean
+settings["diagnostics_virtual_text"] = true
+
 -- Set the format disabled directories here, files under these dirs won't be formatted on save.
 ---@type string[]
 settings["format_disabled_dirs"] = {
@@ -71,7 +75,7 @@ settings["lsp_deps"] = {
 	"html",
 	"jsonls",
 	"lua_ls",
-	"pyright",
+	"jedi_language_server",
 	-- "gopls",
 }
 
