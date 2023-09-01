@@ -162,6 +162,20 @@ local load_core = function()
 	local background = require("core.settings").background
 	vim.api.nvim_command("set background=" .. background)
 	vim.api.nvim_command("colorscheme " .. colorscheme)
+
+	vim.api.nvim_create_autocmd({ "User" }, {
+		pattern = "visual_multi_start",
+		callback = function()
+			require("lualine").hide()
+		end,
+	})
+
+	vim.api.nvim_create_autocmd({ "User" }, {
+		pattern = "visual_multi_exit",
+		callback = function()
+			require("lualine").hide({ unhide = true })
+		end,
+	})
 end
 
 load_core()

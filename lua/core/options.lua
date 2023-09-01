@@ -125,6 +125,9 @@ local function load_options()
 		-- Download the DLLs form https://www.sqlite.org/download.html
 		vim.g.sqlite_clib_path = global.home .. "/Documents/sqlite-dll-win64-x64-3400200/sqlite3.dll"
 	end
+
+	-- vim-visual-multi theme
+	vim.g.VM_theme = "iceblue"
 end
 
 load_options()
