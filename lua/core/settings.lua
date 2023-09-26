@@ -12,6 +12,10 @@ settings["format_on_save"] = true
 ---@type boolean
 settings["format_notify"] = true
 
+-- Set it to false if you don't use copilot
+---@type boolean
+settings["use_copilot"] = false
+
 -- Set it to false if diagnostics virtual text is annoying.
 -- If disabled, you may browse lsp diagnostics using trouble.nvim (press `gt` to toggle it).
 ---@type boolean
@@ -32,6 +36,11 @@ settings["format_disabled_dirs"] = {
 	"~/format_disabled_dir",
 }
 
+-- Set the plugins to disable here.
+-- Example: "Some-User/A-Repo"
+---@type string[]
+settings["disabled_plugins"] = {}
+
 -- Set it to false if you don't use nvim to open big files.
 ---@type boolean
 settings["load_big_files_faster"] = true
@@ -40,11 +49,11 @@ settings["load_big_files_faster"] = true
 -- Settings will complete their replacement at initialization.
 -- Parameters will be automatically completed as you type.
 -- Example: { sky = "#04A5E5" }
----@type palette
+---@type palette[]
 settings["palette_overwrite"] = {}
 
 -- Set the colorscheme to use here.
--- Available values are: `catppuccin`, `catppuccin-latte`, `catppucin-mocha`, `catppuccin-frappe`, `catppuccin-macchiato`, `edge`, `nord`.
+-- Available values are: `catppuccin`, `catppuccin-latte`, `catppucin-mocha`, `catppuccin-frappe`, `catppuccin-macchiato`.
 ---@type string
 settings["colorscheme"] = "catppuccin"
 
@@ -98,8 +107,9 @@ settings["lsp_deps"] = {
 ---@type string[]
 settings["null_ls_deps"] = {
 	"clang_format",
+	"gofumpt",
+	"goimports",
 	"prettier",
-	"rustfmt",
 	"shfmt",
 	"stylua",
 	"vint",
@@ -115,4 +125,31 @@ settings["dap_deps"] = {
 	"python", -- Python (debugpy)
 }
 
-return settings
+-- Set the Treesitter parsers that will be installed during bootstrap here.
+-- Check the below link for all supported languages:
+-- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
+---@type string[]
+settings["treesitter_deps"] = {
+	"bash",
+	"c",
+	"cpp",
+	"css",
+	"go",
+	"gomod",
+	"html",
+	"javascript",
+	"json",
+	"latex",
+	"lua",
+	"make",
+	"markdown",
+	"markdown_inline",
+	"python",
+	"rust",
+	"typescript",
+	"vimdoc",
+	"vue",
+	"yaml",
+}
+
+return require("modules.utils").extend_config(settings, "user.settings")

@@ -1,7 +1,7 @@
 return function()
 	local blend_color = require("modules.utils").gen_neodim_blend_attr()
 
-	require("neodim").setup({
+	require("modules.utils").load_plugin("neodim", {
 		alpha = 0.45,
 		blend_color = "#000000",
 		update_in_insert = {

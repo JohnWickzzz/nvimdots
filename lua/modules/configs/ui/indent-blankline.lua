@@ -1,10 +1,11 @@
 return function()
-	require("indent_blankline").setup({
+	require("modules.utils").load_plugin("indent_blankline", {
 		char = "│",
 		context_char = "┃",
 		show_first_indent_level = true,
 		filetype_exclude = {
 			"", -- for all buffers without a file type
+			"alpha",
 			"dashboard",
 			"dotooagenda",
 			"flutterToolsOutline",

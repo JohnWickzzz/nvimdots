@@ -1,5 +1,5 @@
 return function()
-	require("specs").setup({
+	require("modules.utils").load_plugin("specs", {
 		show_jumps = true,
 		min_jump = 10,
 		popup = {
@@ -7,7 +7,7 @@ return function()
 			inc_ms = 10, -- time increments used for fade/resize effects
 			blend = 10, -- starting blend, between 0-100 (fully transparent), see :h winblend
 			width = 10,
-			winhl = "PMenu",
+			winhl = "PmenuSbar",
 			fader = require("specs").pulse_fader,
 			resizer = require("specs").shrink_resizer,
 		},
