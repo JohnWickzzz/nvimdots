@@ -115,7 +115,7 @@ return function()
 				require("telescope").extensions.frecency.frecency({})
 			end,
 		}),
-		button("space f e", "󰋚 File history", leader, nil, { 
+		button("space f e", "󰋚 File history", leader, nil, {
 			noremap = true,
 			silent = true,
 			nowait = true,

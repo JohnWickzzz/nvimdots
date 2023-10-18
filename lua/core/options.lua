@@ -120,13 +120,13 @@ local function load_options()
 	else
 		vim.g.python_host_prog = use_if_defined(vim.g.python_host_prog, "python")
 		vim.g.python3_host_prog = use_if_defined(vim.g.python3_host_prog, "python3")
-	end	
+	end
 
 	for name, value in pairs(require("modules.utils").extend_config(global_local, "user.options")) do
 		vim.o[name] = value
 	end
 
-    -- vim-visual-multi theme
+	-- vim-visual-multi theme
 	vim.g.VM_theme = "iceblue"
 end
 
