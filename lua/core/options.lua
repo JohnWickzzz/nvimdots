@@ -35,7 +35,8 @@ local function load_options()
 		formatoptions = "1jcroql",
 		grepformat = "%f:%l:%c:%m",
 		grepprg = "rg --hidden --vimgrep --smart-case --",
-		guicursor = "n-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff500-blinkon350-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175,v-ve:block-blinkon0",
+		guicursor = "n-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff500-blinkon350-Cursor/lCursor,"
+			.. "sm:block-blinkwait175-blinkoff150-blinkon175,v-ve:block-blinkon0",
 		helpheight = 12,
 		hidden = true,
 		history = 2000,
