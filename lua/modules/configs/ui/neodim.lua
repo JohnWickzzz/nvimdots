@@ -3,13 +3,13 @@ return function()
 
 	require("modules.utils").load_plugin("neodim", {
 		alpha = 0.45,
-		blend_color = "#000000",
-		update_in_insert = {
-			enable = true,
-			delay = 100,
-		},
-		-- blend_color = blend_color,
-		-- refresh_delay = 75, -- time in ms to wait after typing before refreshing diagnostics
+		-- blend_color = "#000000",
+		-- update_in_insert = {
+		-- 	enable = true,
+		-- 	delay = 100,
+		-- },
+		blend_color = blend_color,
+		refresh_delay = 75, -- time in ms to wait after typing before refreshing diagnostics
 		hide = {
 			virtual_text = true,
 			signs = false,
