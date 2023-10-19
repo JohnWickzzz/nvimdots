@@ -22,9 +22,9 @@ custom["Mr-LLLLL/interestingwords.nvim"] = {
 }
 
 custom["folke/todo-comments.nvim"] = {
-    lazy = true,
-    event = "BufRead",
-    config = require("custom.todo-comments"),
+	lazy = true,
+	event = "BufRead",
+	config = require("custom.todo-comments"),
 }
 
 return custom
