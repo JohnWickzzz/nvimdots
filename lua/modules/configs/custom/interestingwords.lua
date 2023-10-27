@@ -1,6 +1,6 @@
 return function()
 	require("interestingwords").setup({
-		colors = { "#aeee00", "#ff0000", "#0000ff", "#b88823", "#ffa724", "#ff2c4b" },
+		colors = { "#aeee00", "#BA5151", "#1976D2", "#b88844", "#ffa724", "#FF6D00", "#3F51B5" },
 		search_count = true,
 		navigation = true,
 		search_key = "<leader>m",
