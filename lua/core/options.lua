@@ -129,6 +129,10 @@ local function load_options()
 
 	-- vim-visual-multi theme
 	vim.g.VM_theme = "iceblue"
+
+	-- eyeliner.nvim
+	vim.api.nvim_set_hl(0, "EyelinerPrimary", { fg = "#FF4500", bold = true, underline = true })
+	vim.api.nvim_set_hl(0, "EyelinerSecondary", { fg = "#D762EA", underline = true })
 end
 
 load_options()

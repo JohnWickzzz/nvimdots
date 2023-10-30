@@ -27,4 +27,10 @@ custom["folke/todo-comments.nvim"] = {
 	config = require("custom.todo-comments"),
 }
 
+custom["jinh0/eyeliner.nvim"] = {
+	lazy = false,
+	event = "VeryLazy",
+	config = require("custom.eyeliner"), -- Require that config
+}
+
 return custom
