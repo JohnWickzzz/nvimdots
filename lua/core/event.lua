@@ -156,7 +156,7 @@ function autocmd.load_autocmds()
 end
 
 -- 记录当前输入法
--- local Current_input_method = vim.fn.system("/usr/local/bin/macism")
+Current_input_method = vim.fn.system("/usr/local/bin/macism")
 
 -- 切换到英文输入法
 function Switch_to_English_input_method()
