@@ -45,11 +45,11 @@ editor["ojroques/nvim-bufdel"] = {
 -- Considering its steep learning curve as well as backward compatibility issues...
 --  > We have no plan to remove the above plugins for the time being.
 -- But as usual, you can always tweak the plugin to your liking.
-editor["folke/flash.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.flash"),
-}
+-- editor["folke/flash.nvim"] = {
+-- 	lazy = true,
+-- 	event = { "CursorHold", "CursorHoldI" },
+-- 	config = require("editor.flash"),
+-- }
 editor["numToStr/Comment.nvim"] = {
 	lazy = true,
 	event = { "CursorHold", "CursorHoldI" },
