@@ -1,7 +1,7 @@
 local custom = {}
 
 custom["mg979/vim-visual-multi"] = {
-	lazy = false,
+	lazy = true,
 	-- event = "BufRead",
 	config = require("custom.vim-visual-multi"), -- Require that config
 }
@@ -17,7 +17,7 @@ custom["kylechui/nvim-surround"] = {
 }
 
 custom["Mr-LLLLL/interestingwords.nvim"] = {
-	lazy = false,
+	lazy = true,
 	config = require("custom.interestingwords"),
 }
 
@@ -28,9 +28,43 @@ custom["folke/todo-comments.nvim"] = {
 }
 
 custom["jinh0/eyeliner.nvim"] = {
-	lazy = false,
+	lazy = true,
 	event = "VeryLazy",
 	config = require("custom.eyeliner"), -- Require that config
+}
+
+custom["nvim-java/nvim-java"] = {
+	lazy = true,
+	config = require("custom.nvim-java"),
+	dependencies = {
+		"nvim-java/lua-async-await",
+		"nvim-java/nvim-java-core",
+		"nvim-java/nvim-java-test",
+		"nvim-java/nvim-java-dap",
+		"MunifTanjim/nui.nvim",
+		"neovim/nvim-lspconfig",
+		"mfussenegger/nvim-dap",
+		{
+			"williamboman/mason.nvim",
+			opts = {
+				registries = {
+					"github:nvim-java/mason-registry",
+					"github:mason-org/mason-registry",
+				},
+			},
+		},
+		{
+			"williamboman/mason-lspconfig.nvim",
+			opts = {
+				handlers = {
+					["jdtls"] = function()
+						require("java").setup()
+					end,
+				},
+			},
+		},
+	},
+	opts = {},
 }
 
 return custom
