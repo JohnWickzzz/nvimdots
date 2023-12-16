@@ -2,7 +2,7 @@ local custom = {}
 
 custom["mg979/vim-visual-multi"] = {
 	lazy = true,
-	-- event = "BufRead",
+	event = "BufRead",
 	config = require("custom.vim-visual-multi"), -- Require that config
 }
 
@@ -18,6 +18,7 @@ custom["kylechui/nvim-surround"] = {
 
 custom["Mr-LLLLL/interestingwords.nvim"] = {
 	lazy = true,
+	event = "VeryLazy",
 	config = require("custom.interestingwords"),
 }
 
