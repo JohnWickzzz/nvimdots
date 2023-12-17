@@ -36,7 +36,9 @@ custom["jinh0/eyeliner.nvim"] = {
 
 custom["nvim-java/nvim-java"] = {
 	lazy = true,
-	config = require("custom.nvim-java"),
+	ft = "java",
+	-- config = require("custom.nvim-java"),
+	event = "LspAttach",
 	dependencies = {
 		"nvim-java/lua-async-await",
 		"nvim-java/nvim-java-core",
