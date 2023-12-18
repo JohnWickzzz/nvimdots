@@ -196,6 +196,29 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("debug: Open REPL"),
+	["n|<leader>duo"] = map_callback(function()
+			require("dapui").open({ reset = true })
+		end)
+		:with_noremap()
+		:with_silent()
+		:with_desc("debug: Dap UI open"),
+	["n|<leader>duc"] = map_callback(function()
+			require("dapui").close()
+		end)
+		:with_noremap()
+		:with_silent()
+		:with_desc("debug: Open UI close"),
+	["n|<leader>dt"] = map_callback(function()
+			require("dapui").toggle({ reset = true })
+		end)
+		:with_noremap()
+		:with_silent()
+		:with_desc("debug: Open UI toggle"),
+	["n|<leader>dj"] = map_cr("JavaDapConfig"):with_noremap():with_silent():with_desc("debug: Java dap config"),
+	["n|<leader>dm"] = map_cr("JavaTestDebugCurrentMethod")
+		:with_noremap()
+		:with_silent()
+		:with_desc("debug: Java test debug current method"),
 }
 
 bind.nvim_load_mapping(plug_map)

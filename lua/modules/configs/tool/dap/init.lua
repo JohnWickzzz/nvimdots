@@ -15,10 +15,10 @@ return function()
 		dapui.open({ reset = true })
 	end
 	local function debug_terminate_cb()
-		if _debugging then
-			_G._debugging = false
-			dapui.close()
-		end
+		-- if _debugging then
+		-- 	_G._debugging = false
+		-- 	dapui.close()
+		-- end
 	end
 	dap.listeners.after.event_initialized["dapui_config"] = debug_init_cb
 	dap.listeners.before.event_terminated["dapui_config"] = debug_terminate_cb
