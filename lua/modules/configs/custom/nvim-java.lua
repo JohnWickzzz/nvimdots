@@ -11,10 +11,6 @@ return function()
 							path = "/Library/Java/JavaVirtualMachines/graalvm-jdk-21+35.1/Contents/Home",
 							default = true,
 						},
-						{
-							name = "JavaSE-17",
-							path = "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home",
-						},
 					},
 				},
 				jdt = {
