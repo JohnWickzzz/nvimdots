@@ -160,6 +160,7 @@ settings["treesitter_deps"] = {
 	"vimdoc",
 	"vue",
 	"yaml",
+	"java",
 }
 
 -- Set the options for neovim's gui clients like `neovide` and `neovim-qt` here.
