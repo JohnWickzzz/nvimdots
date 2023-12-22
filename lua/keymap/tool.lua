@@ -214,11 +214,11 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("debug: Open UI toggle"),
-	["n|<leader>dj"] = map_cr("JavaDapConfig"):with_noremap():with_silent():with_desc("debug: Java dap config"),
-	["n|<leader>dm"] = map_cr("JavaTestDebugCurrentMethod")
-		:with_noremap()
-		:with_silent()
-		:with_desc("debug: Java test debug current method"),
+	-- ["n|<leader>dj"] = map_cr("JavaDapConfig"):with_noremap():with_silent():with_desc("debug: Java dap config"),
+	-- ["n|<leader>dm"] = map_cr("JavaTestDebugCurrentMethod")
+	-- 	:with_noremap()
+	-- 	:with_silent()
+	-- 	:with_desc("debug: Java test debug current method"),
 }
 
 bind.nvim_load_mapping(plug_map)

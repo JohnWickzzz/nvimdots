@@ -34,40 +34,10 @@ custom["jinh0/eyeliner.nvim"] = {
 	config = require("custom.eyeliner"), -- Require that config
 }
 
-custom["nvim-java/nvim-java"] = {
+custom["mfussenegger/nvim-jdtls"] = {
 	lazy = true,
 	ft = "java",
-	config = require("custom.nvim-java"),
-	event = "LspAttach",
-	dependencies = {
-		"nvim-java/lua-async-await",
-		"nvim-java/nvim-java-core",
-		"nvim-java/nvim-java-test",
-		"nvim-java/nvim-java-dap",
-		"MunifTanjim/nui.nvim",
-		"neovim/nvim-lspconfig",
-		"mfussenegger/nvim-dap",
-		{
-			"williamboman/mason.nvim",
-			opts = {
-				registries = {
-					"github:nvim-java/mason-registry",
-					"github:mason-org/mason-registry",
-				},
-			},
-		},
-		{
-			"williamboman/mason-lspconfig.nvim",
-			opts = {
-				handlers = {
-					["jdtls"] = function()
-						require("java").setup()
-					end,
-				},
-			},
-		},
-	},
-	opts = {},
+	config = require("custom.nvim-jdtls"),
 }
 
 return custom
