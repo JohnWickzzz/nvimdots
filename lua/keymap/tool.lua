@@ -22,7 +22,9 @@ local plug_map = {
 
 	-- Plugin: toggleterm
 	["t|<Esc><Esc>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
-	["t|jk"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
+	-- disable this as it makes long press with `j` not rendering until sometime after the key release.
+	-- see https://github.com/akinsho/toggleterm.nvim/issues/63 for more details
+	-- ["t|jk"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
 	["n|<C-\\>"] = map_cr("ToggleTerm direction=horizontal")
 		:with_noremap()
 		:with_silent()
