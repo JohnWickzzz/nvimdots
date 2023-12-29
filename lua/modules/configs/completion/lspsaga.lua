@@ -31,7 +31,7 @@ return function()
 			enable = true,
 			separator = " " .. icons.ui.Separator,
 			hide_keyword = false,
-			show_file = false,
+			show_file = true,
 			folder_level = 1,
 			color_mode = true,
 			delay = 100,
@@ -93,7 +93,7 @@ return function()
 		implement = {
 			enable = true,
 			sign = true,
-			virtual_text = false,
+			virtual_text = true,
 			priority = 100,
 		},
 		-- LightBulb: https://nvimdev.github.io/lspsaga/lightbulb/
@@ -178,6 +178,6 @@ return function()
 			scroll_down = "<C-d>",
 			scroll_up = "<C-u>",
 		},
-		request_timeout = 3000,
+		request_timeout = 8000,
 	})
 end
