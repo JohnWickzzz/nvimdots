@@ -182,4 +182,37 @@ augroup input_method
 augroup END
 ]])
 
+vim.api.nvim_create_autocmd({ "User" }, {
+	pattern = "visual_multi_start",
+	callback = function()
+		require("lualine").hide()
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "User" }, {
+	pattern = "visual_multi_exit",
+	callback = function()
+		require("lualine").hide({ unhide = true })
+	end,
+})
+
+local jdtCnt = 0
+local function autoJavaDap()
+	local clients = vim.lsp.get_active_clients()
+	if jdtCnt == 0 then
+		for _, client in pairs(clients) do
+			if client.name == "jdtls" then
+				jdtCnt = jdtCnt + 1
+				require("java").dap.config_dap()
+			end
+		end
+	end
+end
+vim.api.nvim_create_autocmd("LspAttach", {
+	pattern = "*.java",
+	callback = function()
+		vim.defer_fn(autoJavaDap, 1000)
+	end,
+})
+
 autocmd.load_autocmds()

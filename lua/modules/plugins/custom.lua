@@ -38,7 +38,7 @@ custom["nvim-java/nvim-java"] = {
 	lazy = true,
 	ft = "java",
 	config = require("custom.nvim-java"),
-	event = "LspAttach",
+	-- event = "LspAttach",
 	dependencies = {
 		"nvim-java/lua-async-await",
 		"nvim-java/nvim-java-core",
@@ -61,7 +61,11 @@ custom["nvim-java/nvim-java"] = {
 			opts = {
 				handlers = {
 					["jdtls"] = function()
-						require("java").setup()
+						require("java").setup({
+							jdk = {
+								auto_install = false,
+							},
+						})
 					end,
 				},
 			},
