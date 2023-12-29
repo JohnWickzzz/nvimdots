@@ -36,6 +36,10 @@ return function()
 			},
 		}),
 		btns.formatting.rustfmt,
+		btns.formatting.google_java_format.with({
+			filetypes = { "java" },
+			extra_args = { "--aosp" },
+		}),
 	}
 	require("modules.utils").load_plugin("null-ls", {
 		border = "rounded",

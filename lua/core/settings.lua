@@ -93,6 +93,7 @@ settings["server_formatting_block_list"] = {
 	lua_ls = true,
 	tsserver = true,
 	clangd = true,
+	jdtls = true,
 }
 
 -- Set the language servers that will be installed during bootstrap here.
@@ -124,6 +125,7 @@ settings["null_ls_deps"] = {
 	"stylua",
 	"vint",
 	"lemminx",
+	"google-java-format",
 }
 
 -- Set the Debug Adapter Protocol (DAP) clients that will be installed and configured during bootstrap here.
