@@ -23,7 +23,7 @@ return function()
 		),
 	})
 
-	local popupmenu_renderer = wilder.popupmenu_renderer(wilder.popupmenu_border_theme({
+	local popupmenu_renderer = wilder.popupmenu_renderer(wilder.popupmenu_palette_theme({
 		border = "rounded",
 		highlights = {
 			default = "Pmenu",
@@ -44,6 +44,10 @@ return function()
 			" ",
 			wilder.popupmenu_scrollbar(),
 		},
+		max_height = "75%",
+		min_height = 0,
+		prompt_position = "top",
+		reverse = 0,
 	}))
 	local wildmenu_renderer = wilder.wildmenu_renderer({
 		apply_incsearch_fix = false,
