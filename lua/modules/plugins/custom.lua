@@ -74,4 +74,9 @@ custom["nvim-java/nvim-java"] = {
 	opts = {},
 }
 
+custom["akinsho/git-conflict.nvim"] = {
+	version = "*",
+	config = true,
+}
+
 return custom
