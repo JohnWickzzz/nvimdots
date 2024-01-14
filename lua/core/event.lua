@@ -215,4 +215,47 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+local function add_java_package_and_header()
+	-- 检查文件是否为空
+	if vim.fn.getline(1) ~= "" then
+		return
+	end
+
+	-- 获取文件的完整路径
+	local full_path = vim.fn.expand("%:p:h")
+	local java_index = string.find(full_path, "/src/main/java/")
+	if not java_index then
+		return
+	end
+
+	-- 提取包路径
+	local package_path = string.sub(full_path, java_index + 15)
+	package_path = package_path:gsub("/", ".")
+
+	-- 获取当前日期
+	local date = os.date("%Y/%m/%d")
+
+	-- 构建 package 声明和注释
+	local content = {
+		"package " .. package_path .. ";",
+		"",
+		"/**",
+		" * @author leebo",
+		" * @since " .. date,
+		" */",
+		"",
+	}
+
+	-- 在文件顶部添加 package 声明和注释
+	vim.api.nvim_buf_set_lines(0, 0, 0, false, content)
+end
+
+-- 为新创建的 Java 文件设置自动命令
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*.java",
+	callback = function()
+		add_java_package_and_header()
+	end,
+})
+
 autocmd.load_autocmds()
