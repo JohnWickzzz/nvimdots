@@ -91,4 +91,8 @@ custom["akinsho/git-conflict.nvim"] = {
 	end,
 }
 
+custom["xiyaowong/virtcolumn.nvim"] = {
+	event = "VeryLazy",
+}
+
 return custom

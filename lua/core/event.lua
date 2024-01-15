@@ -196,10 +196,11 @@ vim.api.nvim_create_autocmd({ "User" }, {
 	end,
 })
 
+-- 首次打开java文件 dap自动配置
 local jdtCnt = 0
 local function autoJavaDap()
-	local clients = vim.lsp.get_active_clients()
 	if jdtCnt == 0 then
+		local clients = vim.lsp.get_active_clients()
 		for _, client in pairs(clients) do
 			if client.name == "jdtls" then
 				jdtCnt = jdtCnt + 1
