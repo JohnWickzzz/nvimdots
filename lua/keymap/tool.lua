@@ -216,6 +216,8 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("debug: Open UI toggle"),
+
+	-- Plugin: nvim-java
 	["n|<leader>dj"] = map_cr("JavaDapConfig"):with_noremap():with_silent():with_desc("debug: Java dap config"),
 	["n|<leader>dm"] = map_cr("JavaTestDebugCurrentMethod")
 		:with_noremap()
