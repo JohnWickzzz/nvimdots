@@ -101,4 +101,15 @@ custom["gregorias/coerce.nvim"] = {
 	event = "VeryLazy",
 }
 
+custom["yorickpeterse/nvim-window"] = {
+	event = "VeryLazy",
+	config = function()
+		require("nvim-window").setup({
+			normal_hl = "DiffAdd",
+			hint_hl = "Bold",
+			border = "none",
+		})
+	end,
+}
+
 return custom

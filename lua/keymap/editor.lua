@@ -65,7 +65,7 @@ local plug_map = {
 
 	-- Plugin: hop
 	["nv|<leader>w"] = map_cmd("<Cmd>HopWordMW<CR>"):with_noremap():with_desc("jump: Goto word"),
-	["nv|<leader>j"] = map_cmd("<Cmd>HopLineMW<CR>"):with_noremap():with_desc("jump: Goto line"),
+	["nv|<leader>jl"] = map_cmd("<Cmd>HopLineMW<CR>"):with_noremap():with_desc("jump: Goto line"),
 	-- ["nv|<leader>k"] = map_cmd("<Cmd>HopLineMW<CR>"):with_noremap():with_desc("jump: Goto line"),
 	["nv|<leader>c"] = map_cmd("<Cmd>HopChar1MW<CR>"):with_noremap():with_desc("jump: Goto one char"),
 	["nv|<leader>cc"] = map_cmd("<Cmd>HopChar2MW<CR>"):with_noremap():with_desc("jump: Goto two chars"),
@@ -82,6 +82,11 @@ local plug_map = {
 
 	-- Plugin: vim-visual-multi
 	["n|<S-C-n>"] = map_cmd("<Plug>(VM-Select-All)"):with_silent():with_noremap():with_desc("multi: Select all"),
+
+	-- Plugin nvim-window
+	["n|<leader>jw"] = map_cu("lua require('nvim-window').pick()")
+		:with_silent()
+		:with_desc("jump: select window"),
 }
 
 bind.nvim_load_mapping(plug_map)
