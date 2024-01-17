@@ -95,4 +95,10 @@ custom["xiyaowong/virtcolumn.nvim"] = {
 	event = "VeryLazy",
 }
 
+custom["gregorias/coerce.nvim"] = {
+	tag = "v0.1.1",
+	config = true,
+	event = "VeryLazy",
+}
+
 return custom
