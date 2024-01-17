@@ -84,9 +84,7 @@ local plug_map = {
 	["n|<S-C-n>"] = map_cmd("<Plug>(VM-Select-All)"):with_silent():with_noremap():with_desc("multi: Select all"),
 
 	-- Plugin nvim-window
-	["n|<leader>jw"] = map_cu("lua require('nvim-window').pick()")
-		:with_silent()
-		:with_desc("jump: select window"),
+	["n|<leader>jw"] = map_cu("lua require('nvim-window').pick()"):with_silent():with_desc("jump: select window"),
 }
 
 bind.nvim_load_mapping(plug_map)
