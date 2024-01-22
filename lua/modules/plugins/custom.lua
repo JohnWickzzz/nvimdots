@@ -1,11 +1,13 @@
 local custom = {}
 
+-- https://github.com/mg979/vim-visual-multi
 custom["mg979/vim-visual-multi"] = {
 	lazy = true,
 	event = "BufRead",
 	config = require("custom.vim-visual-multi"), -- Require that config
 }
 
+-- https://github.com/kylechui/nvim-surround
 custom["kylechui/nvim-surround"] = {
 	version = "*", -- Use for stability; omit to use `main` branch for the latest features
 	event = "VeryLazy",
@@ -16,24 +18,29 @@ custom["kylechui/nvim-surround"] = {
 	end,
 }
 
+-- https://github.com/Mr-LLLLL/interestingwords.nvim
 custom["Mr-LLLLL/interestingwords.nvim"] = {
 	lazy = true,
 	event = "VeryLazy",
 	config = require("custom.interestingwords"),
 }
 
+-- https://github.com/folke/todo-comments.nvim
 custom["folke/todo-comments.nvim"] = {
 	lazy = true,
 	event = "BufRead",
 	config = require("custom.todo-comments"),
 }
 
+-- quick-scope for nvim, f/F color
+-- https://github.com/jinh0/eyeliner.nvim
 custom["jinh0/eyeliner.nvim"] = {
 	lazy = true,
 	event = "VeryLazy",
 	config = require("custom.eyeliner"), -- Require that config
 }
 
+-- https://github.com/nvim-java/nvim-java
 custom["nvim-java/nvim-java"] = {
 	lazy = true,
 	ft = "java",
@@ -74,6 +81,7 @@ custom["nvim-java/nvim-java"] = {
 	opts = {},
 }
 
+-- https://github.com/akinsho/git-conflict.nvim/
 custom["akinsho/git-conflict.nvim"] = {
 	version = "*",
 	event = "VeryLazy",
@@ -91,16 +99,22 @@ custom["akinsho/git-conflict.nvim"] = {
 	end,
 }
 
+-- vertical line
+-- https://github.com/xiyaowong/virtcolumn.nvim
 custom["xiyaowong/virtcolumn.nvim"] = {
 	event = "VeryLazy",
 }
 
+-- cr key for string word case
+-- https://github.com/gregorias/coerce.nvim
 custom["gregorias/coerce.nvim"] = {
 	tag = "v0.1.1",
 	config = true,
 	event = "VeryLazy",
 }
 
+-- buffer window jump
+-- https://github.com/yorickpeterse/nvim-window
 custom["yorickpeterse/nvim-window"] = {
 	event = "VeryLazy",
 	config = function()
