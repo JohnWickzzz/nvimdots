@@ -87,7 +87,14 @@ custom["akinsho/git-conflict.nvim"] = {
 	event = "VeryLazy",
 	config = function()
 		require("git-conflict").setup({
-			default_mappings = true, -- disable buffer local mapping created by this plugin
+			default_mappings = {
+				ours = "<leader>gco",
+				theirs = "<leader>gct",
+				none = "<leader>gc0",
+				both = "<leader>gcb",
+				next = "<leader>gcn",
+				prev = "<leader>gcp",
+			}, -- disable buffer local mapping created by this plugin
 			default_commands = true, -- disable commands created by this plugin
 			disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
 			list_opener = "copen", -- command or function to open the conflicts list
