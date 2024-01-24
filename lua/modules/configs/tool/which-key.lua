@@ -32,6 +32,9 @@ return function()
 			s = {
 				name = icons.cmp.tmux .. "Session",
 			},
+			j = {
+				name = icons.ui.ChevronRight .. " Jump",
+			},
 		},
 	})
 
