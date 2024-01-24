@@ -49,14 +49,14 @@ function mapping.lsp(buf)
 			:with_desc("lsp: Code action for cursor"),
 		["n|gd"] = map_cr("Glance definitions"):with_silent():with_buffer(buf):with_desc("lsp: Preview definition"),
 		["n|gD"] = map_cr("Lspsaga goto_definition"):with_silent():with_buffer(buf):with_desc("lsp: Goto definition"),
-		["n|gu"] = map_callback(function()
-			vim.lsp.buf.declaration()
-		end):with_desc("lsp: declaration"),
 		["n|gh"] = map_cr("Glance references"):with_silent():with_buffer(buf):with_desc("lsp: Show reference"),
 		["n|gm"] = map_cr("Glance implementations")
 			:with_silent()
 			:with_buffer(buf)
 			:with_desc("lsp: Goto implementations"),
+		["n|gM"] = map_callback(function()
+			vim.lsp.buf.declaration()
+		end):with_desc("lsp: Goto declaration"),
 		["n|gci"] = map_cr("Lspsaga incoming_calls")
 			:with_silent()
 			:with_buffer(buf)
