@@ -134,7 +134,9 @@ custom["yorickpeterse/nvim-window"] = {
 custom["danymat/neogen"] = {
 	lazy = true,
 	event = "BufReadPre",
-	config = true,
+	config = function()
+		require("neogen").setup({ snippet_engine = "luasnip" })
+	end,
 }
 
 return custom
