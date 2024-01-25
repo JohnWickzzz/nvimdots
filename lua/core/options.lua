@@ -126,15 +126,6 @@ local function load_options()
 	for name, value in pairs(require("modules.utils").extend_config(global_local, "user.options")) do
 		vim.o[name] = value
 	end
-
-	-- vim-visual-multi theme
-	vim.g.VM_theme = "iceblue"
-
-	-- eyeliner.nvim
-	vim.api.nvim_set_hl(0, "EyelinerPrimary", { fg = "#FF4500", bold = true, underline = true })
-	vim.api.nvim_set_hl(0, "EyelinerSecondary", { fg = "#D762EA", underline = true })
-
-	vim.opt.colorcolumn = "100,120"
 end
 
 load_options()

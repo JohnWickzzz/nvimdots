@@ -1,5 +1,15 @@
 local M = {}
 
+-- vim-visual-multi theme
+vim.g.VM_theme = "iceblue"
+
+-- eyeliner.nvim
+vim.api.nvim_set_hl(0, "EyelinerPrimary", { fg = "#FF4500", bold = true, underline = true })
+vim.api.nvim_set_hl(0, "EyelinerSecondary", { fg = "#D762EA", underline = true })
+
+-- 竖线位置
+vim.opt.colorcolumn = "100,120"
+
 -- 记录当前输入法
 Current_input_method = vim.fn.system("/usr/local/bin/macism")
 

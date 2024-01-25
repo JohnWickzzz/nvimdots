@@ -11,11 +11,7 @@ custom["mg979/vim-visual-multi"] = {
 custom["kylechui/nvim-surround"] = {
 	version = "*", -- Use for stability; omit to use `main` branch for the latest features
 	event = "VeryLazy",
-	config = function()
-		require("nvim-surround").setup({
-			-- Configuration here, or leave empty to use defaults
-		})
-	end,
+	config = require("custom.nvim-surround"),
 }
 
 -- https://github.com/Mr-LLLLL/interestingwords.nvim
@@ -131,6 +127,14 @@ custom["yorickpeterse/nvim-window"] = {
 			border = "none",
 		})
 	end,
+}
+
+-- generate code method comment
+-- https://github.com/danymat/neogen
+custom["danymat/neogen"] = {
+	lazy = true,
+	event = "BufReadPre",
+	config = true,
 }
 
 return custom
