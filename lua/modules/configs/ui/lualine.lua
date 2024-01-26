@@ -30,18 +30,38 @@ return function()
 				},
 				command = {
 					a = { fg = colors.peach, bg = colors.surface0, gui = "bold" },
+					b = { fg = colors.peach, bg = universal_bg, gui = "bold" },
+					c = { fg = colors.peach, bg = universal_bg, gui = "bold" },
+					x = { fg = colors.peach, bg = universal_bg, gui = "bold" },
+					y = { fg = colors.peach, bg = universal_bg, gui = "bold" },
+					z = { fg = colors.peach, bg = colors.surface0, gui = "bold" },
 				},
 				insert = {
 					a = { fg = colors.green, bg = colors.surface0, gui = "bold" },
+					b = { fg = colors.green, bg = universal_bg, gui = "bold" },
+					c = { fg = colors.green, bg = universal_bg, gui = "bold" },
+					x = { fg = colors.green, bg = universal_bg, gui = "bold" },
+					y = { fg = colors.green, bg = universal_bg, gui = "bold" },
+					z = { fg = colors.green, bg = colors.surface0, gui = "bold" },
 				},
 				visual = {
 					a = { fg = colors.flamingo, bg = colors.surface0, gui = "bold" },
+					b = { fg = colors.flamingo, bg = universal_bg, gui = "bold" },
+					c = { fg = colors.flamingo, bg = universal_bg, gui = "bold" },
+					x = { fg = colors.flamingo, bg = universal_bg, gui = "bold" },
+					y = { fg = colors.flamingo, bg = universal_bg, gui = "bold" },
+					z = { fg = colors.flamingo, bg = colors.surface0, gui = "bold" },
 				},
 				terminal = {
 					a = { fg = colors.teal, bg = colors.surface0, gui = "bold" },
 				},
 				replace = {
 					a = { fg = colors.red, bg = colors.surface0, gui = "bold" },
+					b = { fg = colors.red, bg = universal_bg, gui = "bold" },
+					c = { fg = colors.red, bg = universal_bg, gui = "bold" },
+					x = { fg = colors.red, bg = universal_bg, gui = "bold" },
+					y = { fg = colors.red, bg = universal_bg, gui = "bold" },
+					z = { fg = colors.red, bg = colors.surface0, gui = "bold" },
 				},
 				inactive = {
 					a = { fg = colors.subtext0, bg = universal_bg, gui = "bold" },
@@ -244,7 +264,8 @@ return function()
 			function()
 				return icons.ui.FolderWithHeart .. utils.abbreviate_path(vim.fs.normalize(vim.fn.getcwd()))
 			end,
-			color = utils.gen_hl("subtext0", true, true, nil, "bold"),
+			-- 注释之后，当前文件夹名称跟随变色
+			-- color = utils.gen_hl("subtext0", true, true, nil, "bold"),
 		},
 
 		file_location = {
@@ -293,7 +314,8 @@ return function()
 				{
 					"branch",
 					icon = icons.git_nosep.Branch,
-					color = utils.gen_hl("subtext0", true, true, nil, "bold"),
+					-- 注释之后，git分支名称跟随变色
+					-- color = utils.gen_hl("subtext0", true, true, nil, "bold"),
 					cond = conditionals.has_git,
 				},
 				{
