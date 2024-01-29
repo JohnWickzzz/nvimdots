@@ -140,4 +140,11 @@ custom["danymat/neogen"] = {
 	-- end,
 }
 
+-- https://github.com/nacro90/numb.nvim
+-- for :lineNumber show
+custom["nacro90/numb.nvim"] = {
+	event = "VeryLazy",
+	config = true,
+}
+
 return custom
