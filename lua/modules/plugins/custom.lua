@@ -104,14 +104,13 @@ custom["akinsho/git-conflict.nvim"] = {
 
 -- vertical line
 -- https://github.com/xiyaowong/virtcolumn.nvim
-custom["xiyaowong/virtcolumn.nvim"] = {
+custom["zoriya/virtcolumn.nvim"] = {
 	event = "VeryLazy",
 }
 
 -- cr key for string word case
 -- https://github.com/gregorias/coerce.nvim
 custom["gregorias/coerce.nvim"] = {
-	tag = "v0.1.1",
 	config = true,
 	event = "VeryLazy",
 }
