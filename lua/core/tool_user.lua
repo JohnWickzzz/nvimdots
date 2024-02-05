@@ -1,15 +1,34 @@
 local M = {}
 
--- vim-visual-multi theme
-vim.g.VM_theme = "iceblue"
-
--- eyeliner.nvim
-vim.api.nvim_set_hl(0, "EyelinerPrimary", { fg = "#FF4500", bold = true, underline = true })
-vim.api.nvim_set_hl(0, "EyelinerSecondary", { fg = "#D762EA", underline = true })
-
+---------------------------------------- neovim setting --------------------------------------------
 -- 竖线位置
 vim.opt.colorcolumn = "100,120"
 
+------------------------------------ vim-sisual-multi plugin ---------------------------------------
+-- vim-visual-multi theme
+vim.g.VM_theme = "iceblue"
+
+-- 适配lualine
+vim.api.nvim_create_autocmd({ "User" }, {
+	pattern = "visual_multi_start",
+	callback = function()
+		require("lualine").hide()
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "User" }, {
+	pattern = "visual_multi_exit",
+	callback = function()
+		require("lualine").hide({ unhide = true })
+	end,
+})
+
+------------------------------------ eyeliner.nvim plugin ------------------------------------------
+--f/F first/second color
+vim.api.nvim_set_hl(0, "EyelinerPrimary", { fg = "#FF4500", bold = true, underline = true })
+vim.api.nvim_set_hl(0, "EyelinerSecondary", { fg = "#D762EA", underline = true })
+
+---------------------------------------- 输入法切换 ------------------------------------------------
 -- 记录当前输入法
 Current_input_method = vim.fn.system("/usr/local/bin/macism")
 
@@ -37,20 +56,7 @@ augroup input_method
 augroup END
 ]])
 
-vim.api.nvim_create_autocmd({ "User" }, {
-	pattern = "visual_multi_start",
-	callback = function()
-		require("lualine").hide()
-	end,
-})
-
-vim.api.nvim_create_autocmd({ "User" }, {
-	pattern = "visual_multi_exit",
-	callback = function()
-		require("lualine").hide({ unhide = true })
-	end,
-})
-
+-------------------------------------- auto java dap -----------------------------------------------
 -- 首次打开java文件 dap自动配置
 local jdtCnt = 0
 local function autoJavaDap()
@@ -71,6 +77,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+----------------------------------- auto add java file package -------------------------------------
 -- 在文件顶部添加 package 声明和注释
 local function add_java_package_and_header()
 	-- 检查文件是否为空
