@@ -164,4 +164,12 @@ custom["nacro90/numb.nvim"] = {
 	config = true,
 }
 
+-- https://github.com/levouh/tint.nvim
+custom["levouh/tint.nvim"] = {
+	event = "VeryLazy",
+	config = function()
+		require("tint").setup()
+	end,
+}
+
 return custom
