@@ -172,4 +172,12 @@ custom["nacro90/numb.nvim"] = {
 -- 	end,
 -- }
 
+-- https://github.com/mistricky/codesnap.nvim
+-- command: CodeSnapPreviewOn
+custom["mistricky/codesnap.nvim"] = {
+	event = "VeryLazy",
+	build = "make",
+	config = true,
+}
+
 return custom
