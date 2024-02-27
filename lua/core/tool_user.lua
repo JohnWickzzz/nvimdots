@@ -4,6 +4,9 @@ local M = {}
 -- 竖线位置
 vim.opt.colorcolumn = "100,120"
 
+---------------------------------------- none-ls plugin --------------------------------------------
+vim.g.nonels_supress_issue58 = true
+
 ------------------------------------ vim-sisual-multi plugin ---------------------------------------
 -- vim-visual-multi theme
 vim.g.VM_theme = "iceblue"
