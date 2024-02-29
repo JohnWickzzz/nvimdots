@@ -128,7 +128,7 @@ local plug_map = {
 		end)
 		:with_noremap()
 		:with_silent()
-		:with_desc("find: File in project"),
+		:with_desc("find: All file in project"),
 	["n|<leader>fc"] = map_callback(function()
 			require("telescope.builtin").colorscheme({ enable_preview = true })
 		end)
