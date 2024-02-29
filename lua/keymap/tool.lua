@@ -5,11 +5,6 @@ local map_cmd = bind.map_cmd
 local map_callback = bind.map_callback
 require("keymap.helpers")
 
-local findHiddenOpts = {}
-findHiddenOpts.no_ignore = true
-findHiddenOpts.hidden = true
-findHiddenOpts.prompt_title = "Find Files <ALL>"
-
 local plug_map = {
 	-- Plugin: vim-fugitive
 	["n|gps"] = map_cr("G push"):with_noremap():with_silent():with_desc("git: Push"),
@@ -124,7 +119,11 @@ local plug_map = {
 	["n|<leader>fe"] = map_cu("Telescope oldfiles"):with_noremap():with_silent():with_desc("find: File by history"),
 	["n|<leader>ff"] = map_cu("Telescope find_files"):with_noremap():with_silent():with_desc("find: File in project"),
 	["n|<leader>fa"] = map_callback(function()
-			require("telescope.builtin").find_files(findHiddenOpts)
+			require("telescope.builtin").find_files({
+				no_ignore = true,
+				hidden = true,
+				prompt_title = "Find Files <ALL>",
+			})
 		end)
 		:with_noremap()
 		:with_silent()
