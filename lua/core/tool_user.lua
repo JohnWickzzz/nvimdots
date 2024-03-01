@@ -59,27 +59,6 @@ augroup input_method
 augroup END
 ]])
 
--------------------------------------- auto java dap -----------------------------------------------
--- 首次打开java文件 dap自动配置
--- local jdtCnt = 0
--- local function autoJavaDap()
--- 	if jdtCnt == 0 then
--- 		local clients = vim.lsp.get_active_clients()
--- 		for _, client in pairs(clients) do
--- 			if client.name == "jdtls" then
--- 				jdtCnt = jdtCnt + 1
--- 				require("java").dap.config_dap()
--- 			end
--- 		end
--- 	end
--- end
--- vim.api.nvim_create_autocmd("LspAttach", {
--- 	pattern = "*.java",
--- 	callback = function()
--- 		vim.defer_fn(autoJavaDap, 1000)
--- 	end,
--- })
-
 ----------------------------------- auto add java file package -------------------------------------
 -- 在文件顶部添加 package 声明和注释
 local function add_java_package_and_header()
