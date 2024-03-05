@@ -128,6 +128,24 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("find: All file in project"),
+	["n|<leader>fx"] = map_callback(function()
+			local current_buffer = vim.fn.expand("%:t")
+			-- 将文件扩展名从 .java 更改为 .xml
+			local target_file = current_buffer:gsub("%.java$", ".xml")
+			require("telescope.builtin").find_files({ default_text = target_file })
+		end)
+		:with_noremap()
+		:with_silent()
+		:with_desc("find: Mapper.xml in project"),
+	["n|<leader>fj"] = map_callback(function()
+			local current_buffer = vim.fn.expand("%:t")
+			-- 将文件扩展名从 .xml 更改为 .java
+			local target_file = current_buffer:gsub("%.xml$", ".java")
+			require("telescope.builtin").find_files({ default_text = target_file })
+		end)
+		:with_noremap()
+		:with_silent()
+		:with_desc("find: Mapper.java in project"),
 	["n|<leader>fc"] = map_callback(function()
 			require("telescope.builtin").colorscheme({ enable_preview = true })
 		end)
