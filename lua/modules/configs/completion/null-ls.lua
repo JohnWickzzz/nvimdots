@@ -35,7 +35,6 @@ return function()
 				"markdown",
 			},
 		}),
-		btns.formatting.rustfmt,
 		btns.formatting.google_java_format.with({
 			filetypes = { "java" },
 			extra_args = { "--aosp" },
