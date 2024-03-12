@@ -5,7 +5,7 @@ local M = {}
 vim.opt.colorcolumn = "100,120"
 
 ---------------------------------------- none-ls plugin --------------------------------------------
-vim.g.nonels_suppress_issue58 = true
+-- vim.g.nonels_suppress_issue58 = true
 
 ------------------------------------ vim-sisual-multi plugin ---------------------------------------
 -- vim-visual-multi theme
