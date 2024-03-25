@@ -34,6 +34,11 @@ return function()
 			},
 			j = {
 				name = icons.ui.ChevronRight .. " Jump",
+			S = {
+				name = icons.ui.Search .. " Search",
+			},
+			W = {
+				name = icons.ui.Window .. " Window",
 			},
 		},
 	})
