@@ -21,13 +21,6 @@ custom["Mr-LLLLL/interestingwords.nvim"] = {
 	config = require("custom.interestingwords"),
 }
 
--- https://github.com/folke/todo-comments.nvim
-custom["folke/todo-comments.nvim"] = {
-	lazy = true,
-	event = "BufRead",
-	opts = {},
-}
-
 -- quick-scope for nvim, f/F color
 -- https://github.com/jinh0/eyeliner.nvim
 custom["jinh0/eyeliner.nvim"] = {
