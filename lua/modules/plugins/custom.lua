@@ -162,8 +162,11 @@ custom["nacro90/numb.nvim"] = {
 custom["mistricky/codesnap.nvim"] = {
 	event = "VeryLazy",
 	build = "make",
-	version = "v0.0.11",
-	config = true,
+	config = function()
+		require("codesnap").setup({
+			has_breadcrumbs = true,
+		})
+	end,
 }
 
 return custom
