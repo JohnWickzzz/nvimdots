@@ -48,9 +48,7 @@ settings["diagnostics_level"] = "Hint"
 -- Set the plugins to disable here.
 -- Example: "Some-User/A-Repo"
 ---@type string[]
-settings["disabled_plugins"] = {
-	"hrsh7th/cmp-cmdline",
-}
+settings["disabled_plugins"] = {}
 
 -- Set it to false if you don't use nvim to open big files.
 ---@type boolean
