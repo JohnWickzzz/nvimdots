@@ -62,8 +62,8 @@ editor["smoka7/hop.nvim"] = {
 	config = require("editor.hop"),
 }
 editor["tzachar/local-highlight.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	-- lazy = true,
+	-- event = { "CursorHold", "CursorHoldI" },
 	config = require("editor.local-highlight"),
 }
 editor["romainl/vim-cool"] = {
