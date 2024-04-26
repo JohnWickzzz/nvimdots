@@ -166,6 +166,7 @@ custom["mistricky/codesnap.nvim"] = {
 		require("codesnap").setup({
 			has_breadcrumbs = true,
 			watermark = "JohnWickzzz/nvimdots",
+			has_line_number = true,
 		})
 	end,
 }
