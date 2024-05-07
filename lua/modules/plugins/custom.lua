@@ -74,7 +74,7 @@ custom["nvim-java/nvim-java"] = {
 -- https://github.com/akinsho/git-conflict.nvim/
 custom["akinsho/git-conflict.nvim"] = {
 	version = "*",
-	event = "VeryLazy",
+	-- event = "VeryLazy",
 	config = function()
 		require("git-conflict").setup({
 			default_mappings = {
