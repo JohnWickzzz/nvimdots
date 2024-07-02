@@ -41,7 +41,7 @@ return function()
 					{ id = "repl", size = 0.45 },
 				},
 				position = "bottom",
-				size = 0.25,
+				size = 0.3,
 			},
 		},
 		controls = {

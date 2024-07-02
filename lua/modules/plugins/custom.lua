@@ -56,26 +56,15 @@ custom["nvim-java/nvim-java"] = {
 		{
 			"williamboman/mason-lspconfig.nvim",
 			opts = {
-				-- handlers = {
-				-- 	["jdtls"] = function()
-				-- 		require("java").setup({
-				-- 			jdk = {
-				-- 				auto_install = false,
-				-- 			},
-				-- 			verification = {
-				-- 				invalid_order = false,
-				-- 			},
-				-- 		})
-				-- 	end,
-				servers = {
-					jdtls = {
-						-- Your custom jdtls settings goes here
-					},
-				},
-				setup = {
-					jdtls = function()
+				handlers = {
+					["jdtls"] = function()
 						require("java").setup({
-							-- Your custom nvim-java configuration goes here
+							jdk = {
+								auto_install = false,
+							},
+							verification = {
+								duplicate_setup_calls = false,
+							},
 						})
 					end,
 				},
