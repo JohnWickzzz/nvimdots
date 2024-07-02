@@ -49,7 +49,7 @@ settings["server_formatting_block_list"] = {
 	lua_ls = true,
 	tsserver = true,
 	clangd = true,
-    jdtls = true,
+	jdtls = true,
 }
 
 -- Set it to false if you want to turn off LSP Inlay Hints
