@@ -76,7 +76,7 @@ return function()
 			{ "<leader>l", group = icons.misc.LspAvailable .. " Lsp" },
 			{ "<leader>f", group = icons.ui.Telescope .. " Fuzzy Find" },
 			{ "<leader>n", group = icons.ui.FolderOpen .. " Nvim Tree" },
-            { "<leader>j", group = icons.ui.ChevronRight .. " Jump",},
+			{ "<leader>j", group = icons.ui.ChevronRight .. " Jump" },
 		},
 	})
 end
