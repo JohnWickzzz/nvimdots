@@ -9,6 +9,7 @@ return function()
 	require("modules.utils").load_plugin("which-key", {
 		preset = "classic",
 		delay = vim.o.timeoutlen,
+		notify = false,
 		modes = {
 			n = true,
 			i = true,
