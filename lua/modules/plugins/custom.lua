@@ -25,7 +25,7 @@ custom["Mr-LLLLL/interestingwords.nvim"] = {
 -- https://github.com/jinh0/eyeliner.nvim
 custom["jinh0/eyeliner.nvim"] = {
 	lazy = true,
-	event = "VeryLazy",
+	event = "BufRead",
 	config = require("custom.eyeliner"), -- Require that config
 }
 
