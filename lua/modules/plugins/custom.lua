@@ -175,4 +175,8 @@ custom["mistricky/codesnap.nvim"] = {
 	end,
 }
 
+custom["folke/drop.nvim"] = {
+	config = true,
+}
+
 return custom
