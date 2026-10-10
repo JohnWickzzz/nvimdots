@@ -113,9 +113,12 @@ custom["gregorias/coerce.nvim"] = {
 	config = function()
 		-- v5 API：setup 只接受 cases；键位不再自动注册，需显式绑定 <Plug>(coerce-*)
 		require("coerce").setup()
+		-- normal 模式：转换光标下的当前词。gcr 与 cr 同义，用 gcr 的好处是按 g 能看到 which-key 提示
 		vim.keymap.set("n", "cr", "<Plug>(coerce-normal)", { desc = "Coerce word" })
-		vim.keymap.set("n", "gcr", "<Plug>(coerce-motion)", { desc = "Coerce motion" })
-		vim.keymap.set("x", "gcr", "<Plug>(coerce-visual)", { desc = "Coerce visual" })
+		vim.keymap.set("n", "gcr", "<Plug>(coerce-normal)", { desc = "Coerce word" })
+		-- visual 模式：转换选中的文本
+		vim.keymap.set("x", "gcr", "<Plug>(coerce-visual)", { desc = "Coerce selection" })
+		-- motion 模式（要再补一个 motion，如 gcr<case>iw）暂不占键位：<Plug>(coerce-motion) 已注册，需要时自行绑定
 		require("coerce").register_case({
 			keymap = "l",
 			case = function(str)
@@ -123,6 +126,15 @@ custom["gregorias/coerce.nvim"] = {
 			end,
 			description = "lowercase",
 		})
+		-- which-key 提示：按下 cr / gcr 后弹出可选的 case 列表（v5 不再自动注册键位，提示也要自己接）
+		local wke = require("coerce.keymaps").which_key_expand
+		pcall(function()
+			require("which-key").add({
+				{ "cr", group = "+Coerce word", expand = wke.normal_mode, mode = "n" },
+				{ "gcr", group = "+Coerce word", expand = wke.normal_mode, mode = "n" },
+				{ "gcr", group = "+Coerce visual", expand = wke.visual_mode, mode = "x" },
+			})
+		end)
 	end,
 }
 
