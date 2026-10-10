@@ -76,7 +76,7 @@ Chinese introduction is [here](https://zhuanlan.zhihu.com/p/382092667).
 - **Modular.** Easy to customize.
 - **Powerful.** Full functionality to code.
 
-## 🏗 How to Install
+## 🏗 How to Install (目前只改了 mac 这边的，\*nix 应该也没问题)
 
 Simply run the following interactive bootstrap command, and you should be all set 👍
 
@@ -90,9 +90,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 
 ```sh
 if command -v curl >/dev/null 2>&1; then
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ayamir/nvimdots/HEAD/scripts/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/buptlibo/nvimdots/HEAD/scripts/install.sh)"
 else
-    bash -c "$(wget -O- https://raw.githubusercontent.com/ayamir/nvimdots/HEAD/scripts/install.sh)"
+    bash -c "$(wget -O- https://raw.githubusercontent.com/buptlibo/nvimdots/HEAD/scripts/install.sh)"
 fi
 ```
 
@@ -156,7 +156,7 @@ It's strongly recommended to read [Wiki: Prerequisites](https://github.com/ayami
 </h3>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/nvimdots-imgs/main/dashboard.png" alt="Dashboard">
+    <img src="https://raw.githubusercontent.com/buptlibo/nvimdots/main/dashbord.jpg" alt="Dashboard">
     <em>Dashboard</em>
 </p>
 <br>
@@ -164,6 +164,7 @@ It's strongly recommended to read [Wiki: Prerequisites](https://github.com/ayami
 <p align="center">
     <img src="https://raw.githubusercontent.com/ayamir/nvimdots-imgs/main/telescope.png" alt="Telescope">
     <em>Telescope</em>
+    <em>💥 需要额外插件，https://github.com/BurntSushi/ripgrep#installation</em>
 </p>
 <br>
 

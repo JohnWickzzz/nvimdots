@@ -246,7 +246,7 @@ if [[ -n "${NONINTERACTIVE-}" ]]; then
 	USE_SSH=0
 fi
 
-info "This script will install ayamir/nvimdots to:"
+info "This script will install buptlibo/nvimdots to:"
 echo "${DEST_DIR}"
 
 if [[ -d "${DEST_DIR}" ]]; then
@@ -292,9 +292,9 @@ cat <<EOS
 
 Thank you for using this set of configuration!
 - Project Homepage:
-    ${tty_underline}https://github.com/ayamir/nvimdots${tty_reset}
+    ${tty_underline}https://github.com/buptlibo/nvimdots${tty_reset}
 - Further documentation (including executables you ${tty_bold}must${tty_reset} install for full functionality):
-    ${tty_underline}https://github.com/ayamir/nvimdots/wiki/Prerequisites${tty_reset}
+    ${tty_underline}https://github.com/buptlibo/nvimdots/wiki/Prerequisites${tty_reset}
 EOS
 
 if [[ -z "${NONINTERACTIVE-}" ]]; then
