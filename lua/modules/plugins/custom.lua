@@ -109,17 +109,13 @@ custom["zoriya/virtcolumn.nvim"] = {
 -- https://github.com/gregorias/coerce.nvim
 custom["gregorias/coerce.nvim"] = {
 	event = "VeryLazy",
+	dependencies = { "gregorias/coop.nvim" }, -- v5 起的必装依赖
 	config = function()
-		require("coerce").setup({
-			keymap_registry = require("coerce.keymap").keymap_registry(),
-			-- The notification function used during error conditions.
-			notify = function(...)
-				return vim.notify(...)
-			end,
-			-- If you don’t like the default cases and modes, you can override them.
-			cases = require("coerce").default_cases,
-			modes = require("coerce").default_modes,
-		})
+		-- v5 API：setup 只接受 cases；键位不再自动注册，需显式绑定 <Plug>(coerce-*)
+		require("coerce").setup()
+		vim.keymap.set("n", "cr", "<Plug>(coerce-normal)", { desc = "Coerce word" })
+		vim.keymap.set("n", "gcr", "<Plug>(coerce-motion)", { desc = "Coerce motion" })
+		vim.keymap.set("x", "gcr", "<Plug>(coerce-visual)", { desc = "Coerce visual" })
 		require("coerce").register_case({
 			keymap = "l",
 			case = function(str)
