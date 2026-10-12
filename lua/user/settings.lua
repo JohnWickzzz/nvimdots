@@ -8,6 +8,16 @@ settings["use_ssh"] = false
 -- 不使用 copilot
 settings["use_copilot"] = false
 
+-- 关闭 AI 行内补全（minuet-ai.nvim），消除每次启动都会弹的报错：
+--   The API key has not been provided as an environment variable...
+-- 原因：上游 edit_prediction_source 默认 "oai-compatible" 会装上 minuet，
+-- 而它在后端模块 require 时就校验 `AI_API_KEY` 环境变量，本机没有这个变量。
+-- 上游门控是严格相等判断（见 modules/plugins/completion.lua 与 configs/completion/blink.lua）：
+--   "oai-compatible" → 装 minuet；"copilot" → 装 blink-copilot（还要 use_copilot = true）。
+-- 这里取一个不匹配的值，两支都不会启用，同时 blink 的 provider 也会被 user/configs/blink.lua 摘掉。
+-- 以后想用 AI 补全：先 export 好密钥，再把这里改成 "oai-compatible"。
+settings["edit_prediction_source"] = "none"
+
 -- 保存超时放宽到 3s
 settings["format_timeout"] = 3000
 
